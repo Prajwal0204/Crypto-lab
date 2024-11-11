@@ -1,0 +1,12 @@
+def caesar_decrypt(cipher_text, shift):
+decrypted_text = ""
+for char in cipher_text:
+if char.isalpha():
+shift_base = 65 if char.isupper() else 97
+decrypted_text += chr((ord(char) - shift_base - shift) % 26 + shift_base)
+else:
+decrypted_text += char
+return decrypted_text
+         cipher_text = "Khoor Zruog"
+shift = 3
+print(caesar_decrypt(cipher_text, shift))
