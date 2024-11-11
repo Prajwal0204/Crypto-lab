@@ -1,0 +1,13 @@
+def atbash_cipher(text):
+def transform(char):
+if char.isalpha():
+return chr(155 - ord(char)) if char.isupper() else chr(219 - ord(char))
+return char
+
+return ''.join(transform(char) for char in text)
+
+plaintext = "HELLO"
+ciphertext = atbash_cipher(plaintext)
+print("Atbash Encrypted Text:", ciphertext)
+decrypted_text = atbash_cipher(ciphertext)
+print("Atbash Decrypted Text:", decrypted_text)
