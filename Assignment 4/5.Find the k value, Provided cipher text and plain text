@@ -1,0 +1,8 @@
+ef find_caesar_cipher_key(plaintext, ciphertext):
+key = (ord(ciphertext[0]) - ord(plaintext[0])) % 26
+return key
+
+plaintext = "HELLO"
+ciphertext = "KHOOR"
+key = find_caesar_cipher_key(plaintext, ciphertext)
+print("Caesar Cipher Key:", key)
