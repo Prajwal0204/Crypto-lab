@@ -1,0 +1,5 @@
+def brute_force_caesar(cipher_text):
+for shift in range(26):
+print(f"Shift {shift}: {caesar_decrypt(cipher_text, shift)}")
+cipher_text = "Khoor Zruog"
+brute_force_caesar(cipher_text)
